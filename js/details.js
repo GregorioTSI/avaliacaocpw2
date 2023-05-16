@@ -35,11 +35,11 @@ const toggleBookmark = (id) => {
 
   const bookmarkIndex = bookmarks.findIndex((bookmark) => bookmark.id === id);
   if (bookmarkIndex !== -1) {
-    // If the show is already bookmarked, remove it
+    // Se o show já estiver favoritado, remova-o
     bookmarks.splice(bookmarkIndex, 1);
     $(`bookmark-button-${id}`).innerText = 'Bookmark';
   } else {
-    // If the show is not bookmarked, add it
+    // Se o show não estiver favoritado, adiciona-lo
     const bookmark = { id };
     bookmarks.push(bookmark);
     $(`bookmark-button-${id}`).innerText = 'Remove Bookmark';
